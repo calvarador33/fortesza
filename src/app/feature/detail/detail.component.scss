@@ -1,0 +1,19 @@
+.card-text{
+    font-size: 14px;
+  }
+
+  .card-text strong{
+    display:inline-block;
+    width: 130px;
+  }
+
+  .card-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-img-top{
+    width: 50%;
+  }
