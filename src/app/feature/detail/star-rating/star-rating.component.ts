@@ -15,7 +15,8 @@ export class StarRatingComponent implements OnInit  {
   disabled = [];
 
   constructor() {
-    
+    this.actives = [];
+    this.disabled = [];
   }
 
   ngOnInit() {
