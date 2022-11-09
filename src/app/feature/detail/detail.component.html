@@ -1,0 +1,72 @@
+<app-loader *ngIf="!data"></app-loader>
+
+
+<div class="container mt-3" *ngIf="data">
+
+
+
+
+  <div class="row">
+
+
+    <div *ngIf="data" class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      <div class="card-img" *ngIf="url!=''">
+        <img class="card-img-top" [src]="url" [alt]="data.name">
+      </div>
+
+      <div class="card-body">
+
+
+        <h5 class="card-title">{{data.name}}</h5>
+        <p class="card-text">{{data.description}}</p>
+        <p class="card-text"> <strong> origen:</strong> {{data.origin}}</p>
+        <p class="card-text"> <strong>life_span:</strong> {{data.life_span}}</p>
+
+        <p class="card-text"> <strong>Affection Level</strong>
+          <app-star-rating [score]="data.affection_level"></app-star-rating>
+        </p>
+        <p class="card-text"> <strong>Adaptability</strong> 
+          <app-star-rating [score]="data.adaptability"></app-star-rating>
+        </p>
+        <p class="card-text"> <strong>Child Friendly</strong> 
+          <app-star-rating [score]="data.child_friendly"></app-star-rating>
+        </p>
+        <p class="card-text"> <strong>Dog Friendly</strong> 
+          <app-star-rating [score]="data.dog_friendly"></app-star-rating>
+        </p>
+        <p class="card-text"> <strong>Energy Level</strong> 
+          <app-star-rating [score]="data.energy_level"></app-star-rating>
+        </p>
+        <p class="card-text"> <strong>Grooming</strong> 
+          <app-star-rating [score]="data.grooming"></app-star-rating>
+        </p>
+
+        <p class="card-text"> <strong>Health Issues</strong> 
+          <app-star-rating [score]="data.health_issues"></app-star-rating>
+        </p>
+
+        <p class="card-text"> <strong>Intelligence</strong> 
+          <app-star-rating [score]="data.intelligence"></app-star-rating>
+        </p>
+
+        <p class="card-text"> <strong>Shedding Level</strong>
+          <app-star-rating [score]="data.shedding_level"></app-star-rating>
+        </p>
+        <p class="card-text"> <strong>Social Needs</strong> 
+          <app-star-rating [score]="data.social_needs"></app-star-rating>
+        </p>
+        <p class="card-text"> <strong>Stranger Friendly</strong> 
+          <app-star-rating [score]="data.stranger_friendly"></app-star-rating>
+        </p>
+        <p class="card-text"> <strong>Vocalisation</strong> 
+          <app-star-rating [score]="data.vocalisation"></app-star-rating>
+        </p>
+
+        <a [href]="data.wikipedia_url" target="_blank" class="btn btn-dark">Wikipedia</a>
+      </div>
+    </div>
+
+
+  </div>
+</div>
